@@ -20,6 +20,7 @@ Route::get('/', [RegistrationController::class, 'index']);
 Auth::routes();
 
 Route::get('/registrations', [RegistrationController::class, 'show'])->middleware('auth');
+Route::post('/registration', [RegistrationController::class, 'store']);
 
 Route::get('/admin', function () {
   return view("home");
