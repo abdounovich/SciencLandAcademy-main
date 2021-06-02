@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header text-right">{{ __('لوحة التحكم') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+<div  class=" d-flex justify-content-between">
+                                        <a href="#">إعدادات</a>
+<a href="/registrations" class="text-right">قائمة المسجلين </a>
+                    <a href="/formations">التحكم في الدورات </a>
+
+</div>
                 </div>
             </div>
         </div>

@@ -15,129 +15,129 @@
         --input-padding-x: 1.5rem;
         --input-padding-y: .75rem;
       }
-      
+
       body {
         background:url(https://images.pexels.com/photos/3740217/pexels-photo-3740217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) ;background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-       
+
         font-family: 'Changa', sans-serif;
 
       }
       select { text-align-last: right; }
      </style>
-<link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body >
-    
-  
+
+
 <div class="container">
     <div class="row">
 
-        
+
         @foreach ( $registrations as $registration)
 
         <table dir="rtl" style="opacity: 0.8" class="mt-5 m-2 table table-hover table-borderless  shadow shadow-lg bg-white  table-striped text-dark text-right " style="opacity: 0.9">
-           
+
             <tbody>
 
-            
-                      
-              
-            
-                    <tr>    
+
+
+
+
+                    <tr>
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-user  text-primary"></span>    
-                                الإسم                                                 
+                                <span class="glyphicon glyphicon-user  text-primary"></span>
+                                الإسم
                             </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->nom}}     
+                            {{$registration->nom}}
                         </td>
                     </tr>
-                    <tr>        
+                    <tr>
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-cloud text-primary"></span>  
-                                اللقب                                                 
+                                <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                اللقب
                             </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->prenom}}     
+                            {{$registration->prenom}}
                         </td>
                     </tr>
-    
-                    <tr>        
+
+                    <tr>
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-bookmark text-primary"></span> 
-                               الإيميل                                               
+                                <span class="glyphicon glyphicon-bookmark text-primary"></span>
+                               الإيميل
                             </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->email}}     
+                            {{$registration->email}}
                         </td>
                     </tr>
-    
-    
-                    <tr>        
+
+
+                    <tr>
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span>
  الهاتف                            </strong>
                         </td>
                         <td class="text-danger">
-                            <a class="text-danger" href="tel:{{$registration->telephone}}">{{$registration->telephone}}  </a>   
+                            <a class="text-danger" href="tel:{{$registration->telephone}}">{{$registration->telephone}}  </a>
                         </td>
                     </tr>
-                    <tr>        
+                    <tr>
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-envelope text-primary"></span> 
-                                العمر                                                 
+                                <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                العمر
                             </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->age}} سنة      
+                            {{$registration->age}} سنة
                         </td>
                     </tr>
-                    <tr>        
+                    <tr>
                         <td>
                             <strong>
                                 <span class="glyphicon glyphicon-calendar text-primary"></span>
 المستوى                             </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->niveau}}     
+                            {{$registration->niveau}}
                         </td>
                     </tr>
-                    <tr>        
+                    <tr>
                         <td>
                             <strong>
                                 <span class="glyphicon glyphicon-calendar text-primary"></span>
 الدورة                              </strong>
                         </td>
                         <td class="text-danger">
-                            {{$registration->formation}}     
+                            {{$registration->formation}}
                         </td>
-                    </tr>                                    
+                    </tr>
                 </tbody>
           </table>
 
           @endforeach
 
-     
+
     </div>
-</div>  
+</div>
 
 
 
 <div class="container">
     <div class="row">
         <table class="table table-user-information">
-           
+
         </table>
     </div>
 </div>
@@ -147,9 +147,9 @@
     <div  class="row d-flex justify-content-center">
     <div  >{{$registrations->links('vendor.pagination.bootstrap-4')}}
    </div>
-  </div> 
+  </div>
  </div>
-       
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
