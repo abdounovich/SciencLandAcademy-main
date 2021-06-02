@@ -22,8 +22,8 @@ Auth::routes();
 Route::get('/registrations', [RegistrationController::class, 'show'])->middleware('auth');
 
 Route::get('/admin', function () {
-   middleware('auth');return view("home");
-});
+  return view("home");
+})->middleware('auth');
 Route::get('/formations', [FormationController::class, 'index'])->middleware('auth');
 Route::post('/formations', [FormationController::class, 'store']);
 Route::get('/actif/{id}/{type}', [FormationController::class, 'ativation'])->middleware('auth');
