@@ -29,6 +29,7 @@ Route::get('/formations', [FormationController::class, 'index'])->middleware('au
 Route::post('/formations', [FormationController::class, 'store']);
 Route::get('/actif/{id}/{type}', [FormationController::class, 'ativation'])->middleware('auth');
 Route::post('/formations/edit/{id}', [FormationController::class, 'update']);
+Route::get('/formations/delete/{id}', [FormationController::class, 'destroy'])->middleware('auth');
 
 
 

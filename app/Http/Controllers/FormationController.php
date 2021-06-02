@@ -99,8 +99,14 @@ return redirect()->back();
      * @param  \App\Models\Formation  $formation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Formation $formation)
+    public function destroy($id)
     {
-        //
+        $formation=Formation::find($id);
+        $formation->delete();
+          $message=" لقد تم حذف الدورة بنجاح   ";
+
+
+        return redirect()->back()->with('success', $message );
+
     }
 }
